@@ -1,0 +1,29 @@
+/* src/components/GradientAnimation.css */
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .gradient-background {
+    /*background: linear-gradient(270deg, #000428, #004e92);*/
+    /*background: radial-gradient(circle, #000428, #004e92);*/
+    background: repeating-radial-gradient(circle, #000428, #004e92 37%);
+    /*background: -moz-radial-gradient(circle, #000428, #004e92);*/
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  

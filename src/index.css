@@ -1,0 +1,109 @@
+/* Importar las fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Open+Sans:wght@400&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Texto blanco para contraste */
+}
+
+h1, h2, h3 {
+  font-family: 'League Spartan', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header, .hero, .features, .contact, .footer {
+  padding: 20px;
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #61dafb;
+  color: #282c34;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.features {
+  background-color: #333; /* Un gris oscuro para diferenciar */
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.feature-item {
+  width: 30%;
+  background: #444; /* Un gris oscuro */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  padding: 10px;
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #282c34;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .feature-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-item {
+    width: 80%;
+    max-width: 100%;
+  }
+
+  .hero {
+    padding: 50px 20px;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}

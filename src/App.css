@@ -1,0 +1,405 @@
+/* Importar las fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Open+Sans:wght@400&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Texto blanco para contraste */
+}
+
+h1, h2, h3 {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 500;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
+  color: #fff; /* Texto blanco para contraste */
+}
+
+/* SECCION HEADER */
+.header {
+  background-color: hsl(0, 0%, 100%); /* Fondo dorado  #BD8713 */
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 30px;
+}
+
+.logo {
+  margin-top: 0;
+  height: 30px;
+}
+
+/* SECCION TITULO OFERTA PRINCIPAL */
+.hero {
+  text-align: center;
+  padding: 80px 0; /* Aumenta el padding para compensar el header fijo */
+  position: relative;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Asegura que el video esté detrás del contenido */
+  opacity: 0.47; /* opacidad orig. 0.47 */
+}
+
+.hero h1, .hero p {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s, transform 2s;
+}
+
+.hero h1.fade-in, .hero p.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero h1 {
+  font-size: 6em;
+  margin-bottom: 80px;
+  z-index: 1; /* Asegura que el texto esté encima del video */
+}
+
+.hero p {
+  margin-top: 0px;
+  margin-bottom: 65px;
+  font-size: 1.195em;
+  z-index: 1; /* Asegura que el texto esté encima del video */
+}
+
+.hero .highlight {
+  color: #BD8713; /* Color dorado */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* SECCION BENEFICIOS */
+.benefits {
+  padding: 40px 0;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s, transform 2s;
+}
+
+.benefit-item.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.benefit-content {
+  flex: 1;
+  text-align: left;
+  margin-right: 19px;
+  margin-left: 19px;
+}
+
+.benefit-content h3 {
+  font-size: 3.9em;
+  margin-bottom: 10px;
+}
+
+.benefit-content p {
+  font-size: 1.19em;
+}
+
+/* Contenedor del video con degradado */
+.video-gradient-container {
+  position: relative;
+  width: 100%;
+  max-width: 850px; /* Ajusta según sea necesario */
+  height: 315px; /* Ajusta según sea necesario */
+  margin: 20px 0;
+  overflow: hidden;
+  transition: transform 0.3s ease !important; /* Añadir transición para animación */
+}
+
+.video-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  z-index: 1;
+  pointer-events: none; /* Asegura que el gradiente no interfiera con el hover */
+  border-radius: 0px;
+  object-fit: cover;
+}
+
+.video-gradient-left {
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)) ;
+}
+
+.video-gradient-right {
+  background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)) ;
+}
+
+
+.video-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transition: transform 0.3s ease !important; /* Añadir transición para animación */
+}
+
+.video-gradient-container:hover {
+  transform: scale(1.05) !important; /* Ampliar ligeramente el video */
+}
+
+.video-placeholder video {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+/* SECCION DETALLES */
+.details {
+  text-align: center;
+  padding: 40px 0;
+  margin-bottom: 60px;
+}
+
+.details h2, .details p {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s, transform 2s;
+}
+
+.details h2.fade-in, .details p.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.details h2 {
+  margin-top: 10px;
+  font-size: 3.5em;
+}
+
+.details p {
+  font-size: 1.17em;
+}
+
+/* SECCION CONTACTO IA */
+.contact {
+  position: relative;
+  background-color: transparent; /* Fondo transparente para ver el fondo interactivo */
+  padding: 40px 0;
+  z-index: 1; /* Para asegurarse de que el contenido esté encima del fondo interactivo */
+  margin-bottom: 100px;
+}
+
+.contact .container {
+  position: relative;
+  z-index: 2; /* Para asegurarse de que el contenido esté encima del fondo interactivo */
+}
+
+.contact h2, .contact p, .contact .cta-button {
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(50px);
+  transition: opacity 2s, transform 2s; /* Animación de fade-in */
+}
+
+.contact .fade-in {
+  opacity: 1; /* Visible cuando se añade la clase fade-in */
+  transform: translateY(0);
+}
+
+.contact h2 {
+  font-size: 3.5em;
+}
+
+.contact p {
+  font-size: 1.17em;
+}
+
+.cta-button {
+  padding: 12px 45px !important; /* Ajustar padding horizontal */
+  background-color: #2468b1 !important; /* Color inicial */
+  color: white;
+  border: none;
+  border-radius: 50px !important; /* Bordes redondeados con !important */
+  cursor: pointer;
+  font-size: 1.2em; /* Tamaño de fuente ajustado */
+  transition: background-color 0.3s ease !important; /* Transición más lenta */
+  margin-top: 59px;
+  margin-bottom: 50px;
+}
+
+.cta-button:hover {
+  background-color: #014ea0 !important; /* Color de hover más oscuro */
+}
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* SECCION FOOTER */
+.footer {
+  padding: 20px 0;
+  background-color: #000;
+  text-align: center;
+}
+
+/* Navegación lateral */
+.side-nav {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  margin: 10px 0;
+  background-color: #666;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+.nav-dot.active {
+  background-color: #fff;
+  border: 2px solid #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Ajustar tamaños de títulos */
+
+  .hero h1 {
+    font-size: 3.2em;
+    margin-bottom: 44px;
+  }
+
+  .hero p {
+    font-size: 1em;
+    margin-bottom: 7px;
+  }
+
+  .benefit-content h3 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .benefit-content p {
+    font-size: 1em;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+  }
+
+  .details h2 {
+    font-size: 2.5em;
+  }
+
+  .cta-button {
+    font-size: 1.2em;
+  }
+
+  /* Reestructuración de beneficios */
+  .benefit-item {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
+  .video-gradient-container {
+    width: 100%;
+    max-width: 375px;
+    height: 200px; /* Reducción del tamaño del video */
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 0;
+  }
+
+  .video-gradient {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Gradiente desde abajo hacia arriba */
+  }
+
+  .video-placeholder video {
+    border-radius: 31px; /* Reducción del radio de borde */
+  }
+
+  /* Ajuste de tamaño de títulos de detalles */
+  .details h2 {
+    font-size: 2.5em;
+    margin-top: 0px;
+  }
+
+  .details p {
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Ajuste de tamaño de títulos de contacto */
+  .contact h2 {
+    font-size: 2.5em;
+  }
+
+  .contact p {
+    font-size: 1em;
+  }
+
+  /* Navegación lateral */
+  .side-nav {
+    position: fixed;
+    top: 50%;
+    right: 7px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-dot {
+    width: 7px;
+    height: 7px;
+    margin: 6px 0;
+    background-color: #666;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s;
+  }
+
+  .nav-dot.active {
+    background-color: #fff;
+    border: 2px solid #666;
+  }
+
+}
